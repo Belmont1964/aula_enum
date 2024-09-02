@@ -1,15 +1,16 @@
 package application;
 
-import java.util.Date;
-
+import java.time.LocalDateTime;
 import entities.Order;
 import entities.enums.OrderStatus;
 
 public class Program {
 
 	public static void main(String[] args) {
+		
+		LocalDateTime var = LocalDateTime.now();
 
-		Order order = new Order(1080, new Date(), OrderStatus.PENDING_PAYMENT);
+		Order order = new Order(1080, var, OrderStatus.PENDING_PAYMENT);
 		
 		System.out.println(order);
 		
